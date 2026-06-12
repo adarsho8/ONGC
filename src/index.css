@@ -1,0 +1,137 @@
+/* ── ONGC Land Acquisition Portal — Global Theme ─────────────────────────── */
+/* Inspired by: dark industrial aesthetic, black/charcoal bg, red accent #a52c33 */
+
+:root {
+  --ongc-red:     #a52c33;
+  --ongc-red-dk:  #8b1f25;
+  --ongc-red-lt:  #c94040;
+  --ongc-dark:    #0d0d0d;
+  --ongc-charcoal:#1a1a1a;
+  --ongc-gray:    #2a2a2a;
+  --ongc-border:  #333;
+  --ongc-text:    #e8e8e8;
+  --ongc-muted:   #888;
+  --ongc-white:   #ffffff;
+
+  --sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--sans);
+  background: #f1f5f9;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Page Header (shared across all inner pages) ─────────────────────────── */
+.ongc-header {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);
+  border-bottom: 3px solid var(--ongc-red);
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(165, 44, 51, 0.3);
+}
+
+.ongc-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ongc-header__logo {
+  width: 42px;
+  height: 42px;
+  background: var(--ongc-red);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.ongc-header__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.ongc-header__name {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.ongc-header__sub {
+  font-size: 10px;
+  color: var(--ongc-red-lt);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ongc-header__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ongc-header__badge {
+  font-size: 11px;
+  color: #888;
+  font-family: monospace;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.ongc-header__back {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.3px;
+}
+
+.ongc-header__back:hover {
+  background: rgba(165, 44, 51, 0.3);
+  border-color: var(--ongc-red);
+  color: #fff;
+}
+
+/* ── Decorative top strip for inner pages ────────────────────────────────── */
+.ongc-page-strip {
+  height: 3px;
+  background: linear-gradient(90deg, var(--ongc-red) 0%, #dc2626 40%, var(--ongc-red-dk) 100%);
+}
